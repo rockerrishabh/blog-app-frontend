@@ -8,7 +8,12 @@ export const Route = createLazyFileRoute("/")({
 function Index() {
   const [data, setData] = useState<string>();
   const fetchFirst = async () => {
-    const res = await fetch("https://api.rishabhportfolio.site");
+    const res = await fetch("https://api.rishabhportfolio.site", {
+method: "Post", 
+headers: {
+"Content-Type": "application/json} 
+} 
+} );
     const data: string = (await res.json()) as string;
     setData(data);
   };
