@@ -6,15 +6,15 @@ export const Route = createLazyFileRoute("/")({
 });
 
 function Index() {
-  const [data, setData] = useState<string>();
+  const [data, setData] = useState<{ message: string }>();
   const fetchFirst = async () => {
     const res = await fetch("https://api.rishabhportfolio.site", {
-method: "Post", 
-headers: {
-"Content-Type": "application/json"
-} 
-} );
-    const data: string = (await res.json()) as string;
+      method: "Get",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = (await res.json()) as { message: string };
     setData(data);
   };
 
@@ -25,7 +25,7 @@ headers: {
   return (
     <div className="p-2">
       <h3>Welcome Home!</h3>
-      {data && <p>{data}</p>}
+      {data && <p>{JSON.stringify(data)}</p>}
     </div>
   );
 }
