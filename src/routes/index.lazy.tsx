@@ -11,8 +11,7 @@ function Index() {
     const res = await fetch("https://api.rishabhportfolio.site", {
 method: "Post", 
 headers: {
-"Content-Type": "application/json" 
-} 
+"Content-Type": "application/json"
 } 
 } );
     const data: string = (await res.json()) as string;
