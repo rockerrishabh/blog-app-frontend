@@ -39,13 +39,13 @@ export default function ThemeMenu() {
         <MenuItems
           transition
           anchor="bottom end"
-          className="ml-1 mt-1 w-20 origin-top-right rounded-xl border bg-slate-200 p-1 text-sm/6 text-slate-800 transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-200"
+          className="ml-2 mt-1.5 w-24 origin-top-right rounded-xl border bg-slate-200 p-1 text-sm/6 text-slate-800 transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0 dark:border-slate-700 dark:bg-slate-700 dark:text-slate-200"
         >
           {ThemeMenuItem.map((item) => (
             <MenuItem key={item.name}>
               <Button
                 onClick={() => setTheme(item.name)}
-                className="group flex w-full items-center gap-2 rounded-lg px-3 py-1.5 data-[focus]:bg-slate-300 dark:data-[focus]:bg-slate-600"
+                className="group flex w-full items-center justify-center rounded-lg px-3 py-1.5 data-[focus]:bg-slate-300 dark:data-[focus]:bg-slate-600"
               >
                 {item.icon}
               </Button>
