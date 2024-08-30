@@ -52,6 +52,10 @@ export default defineConfig({
         theme_color: "#FFFFFF",
         description: "Simple Blog Application.",
       },
+      useCredentials: true,
+      workbox: {
+        cleanupOutdatedCaches: true,
+      },
     }),
   ],
   server: {
