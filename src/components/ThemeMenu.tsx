@@ -29,7 +29,10 @@ export default function ThemeMenu() {
   return (
     <div className="">
       <Menu>
-        <MenuButton className="inline-flex items-center gap-2 rounded-md bg-slate-200 px-3 py-1.5 text-sm/6 font-semibold text-slate-800 shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-slate-300 data-[open]:bg-gray-300 data-[focus]:outline-1 data-[focus]:outline-slate-200 dark:bg-slate-600 dark:text-slate-200">
+        <MenuButton
+          aria-label="ThemeButton"
+          className="inline-flex items-center gap-2 rounded-md bg-slate-200 px-3 py-1.5 text-sm/6 font-semibold text-slate-800 shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-slate-300 data-[open]:bg-gray-300 data-[focus]:outline-1 data-[focus]:outline-slate-200 dark:bg-slate-600 dark:text-slate-200"
+        >
           {theme === "dark" && <SunIcon />}
           {theme === "light" && <MoonIcon />}
           {theme === "system" && <SystemIcon />}
