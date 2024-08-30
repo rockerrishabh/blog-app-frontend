@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 function Header() {
   return (
-    <header className="border-b border-slate-600">
+    <header className="border-b bg-slate-300">
       <Link to="/">
         <img
           className="h-10 w-40"
